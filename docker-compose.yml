@@ -1,0 +1,9 @@
+﻿services:
+  web-calculator:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: task1-web-calculator
+    ports:
+      - "8080:8080"
+    restart: unless-stopped

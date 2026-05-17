@@ -1,0 +1,93 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 1 Web Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="ambient ambient-a" aria-hidden="true"></div>
+    <div class="ambient ambient-b" aria-hidden="true"></div>
+
+    <main class="app">
+      <header class="app-header">
+        <div>
+          <p class="kicker">Task 1</p>
+          <h1>Web Calculator</h1>
+          <p class="subtitle">
+            Base math operations, expression support, and mobile-ready layout.
+          </p>
+        </div>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme">
+          Theme: Light
+        </button>
+      </header>
+
+      <section class="workspace">
+        <article class="calculator-card" aria-label="Calculator">
+          <div class="display" role="status" aria-live="polite">
+            <p id="expression" class="expression">&nbsp;</p>
+            <p id="result" class="result">0</p>
+            <p id="error" class="error" role="alert" hidden></p>
+          </div>
+
+          <div class="keys extra-keys">
+            <button type="button" class="key key-fn" data-action="leftParen">(</button>
+            <button type="button" class="key key-fn" data-action="rightParen">)</button>
+            <button type="button" class="key key-fn" data-action="percent">%</button>
+            <button type="button" class="key key-fn" data-action="sqrt">sqrt</button>
+            <button type="button" class="key key-fn" data-action="square">x^2</button>
+            <button type="button" class="key key-fn" data-action="reciprocal">1/x</button>
+          </div>
+
+          <div class="keys main-keys">
+            <button type="button" class="key key-critical" data-action="allClear">AC</button>
+            <button type="button" class="key key-critical" data-action="clear">C</button>
+            <button type="button" class="key key-fn" data-action="toggleSign">+/-</button>
+            <button type="button" class="key key-operator" data-action="operator" data-value="/">÷</button>
+
+            <button type="button" class="key" data-action="digit" data-value="7">7</button>
+            <button type="button" class="key" data-action="digit" data-value="8">8</button>
+            <button type="button" class="key" data-action="digit" data-value="9">9</button>
+            <button type="button" class="key key-operator" data-action="operator" data-value="*">×</button>
+
+            <button type="button" class="key" data-action="digit" data-value="4">4</button>
+            <button type="button" class="key" data-action="digit" data-value="5">5</button>
+            <button type="button" class="key" data-action="digit" data-value="6">6</button>
+            <button type="button" class="key key-operator" data-action="operator" data-value="-">-</button>
+
+            <button type="button" class="key" data-action="digit" data-value="1">1</button>
+            <button type="button" class="key" data-action="digit" data-value="2">2</button>
+            <button type="button" class="key" data-action="digit" data-value="3">3</button>
+            <button type="button" class="key key-operator" data-action="operator" data-value="+">+</button>
+
+            <button type="button" class="key key-zero" data-action="digit" data-value="0">0</button>
+            <button type="button" class="key" data-action="decimal">.</button>
+            <button type="button" class="key key-equal" data-action="equals">=</button>
+          </div>
+
+          <p class="hint">
+            Keyboard: <code>0-9</code>, <code>+ - * /</code>, <code>( )</code>, <code>Enter</code>, <code>Esc</code>, <code>Backspace</code>, <code>%</code>, <code>r</code>.
+          </p>
+        </article>
+
+        <aside class="history-card" aria-label="Calculation history">
+          <div class="history-head">
+            <h2>History</h2>
+            <button id="clear-history" class="history-clear" type="button">Clear</button>
+          </div>
+          <ul id="history-list" class="history-list" aria-live="polite"></ul>
+        </aside>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
