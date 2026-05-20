@@ -5,7 +5,7 @@ A responsive web calculator built with pure HTML, CSS, and JavaScript (no framew
 ## Project structure
 
 ```text
-Task_1_WebCalculator/
+WebCalculator/
 ├── index.html
 ├── style.css
 ├── script.js
