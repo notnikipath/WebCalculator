@@ -1,4 +1,4 @@
-﻿# Task 1 - Web Calculator
+﻿# Web Calculator
 
 A responsive web calculator built with pure HTML, CSS, and JavaScript (no frameworks).
 
@@ -66,7 +66,7 @@ Task_1_WebCalculator/
 Open `index.html` directly in a browser, or run a local static server:
 
 ```bash
-cd Task_1_WebCalculator
+cd 'your/project/folder'
 python -m http.server 8080
 ```
 
@@ -77,16 +77,16 @@ Then open: `http://localhost:8080`
 ### Option 1: docker compose
 
 ```bash
-cd Task_1_WebCalculator
+cd 'your/project/folder'
 docker compose up --build -d
 ```
 
 ### Option 2: docker build + run
 
 ```bash
-cd Task_1_WebCalculator
-docker build -t task1-web-calculator .
-docker run --rm -p 8080:8080 task1-web-calculator
+cd 'your/project/folder'
+docker build -t web-calculator .
+docker run --rm -p 8080:8080 web-calculator
 ```
 
 Open: `http://localhost:8080`
