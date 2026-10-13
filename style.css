@@ -360,3 +360,26 @@ h1 {
     min-height: 48px;
   }
 }
+
+/* UI/UX Pro Max — focused calculator workspace. */
+:root { --bg:#f1f7f6; --bg-soft:#e9f1ef; --text:#172b29; --muted:#465f5b; --card:#ffffff; --card-strong:#f7faf9; --line:#cadbd6; --accent:#0f766e; --accent-2:#0f766e; --shadow:0 4px 16px rgb(15 40 35 / 5%); }
+body[data-theme="dark"] { --bg:#101f20; --bg-soft:#172a2c; --text:#eff8f5; --muted:#b4cfc7; --card:#1a2d2f; --card-strong:#21393b; --line:#53716c; --accent:#71dfc6; --accent-2:#71dfc6; }
+body { background:var(--bg); font-family:'Segoe UI',system-ui,sans-serif; font-size:16px; line-height:1.5; }
+.ambient { display:none; }
+.app { max-width:1100px; padding:48px 24px; }
+.app-header { align-items:center; padding-bottom:24px; border-bottom:1px solid var(--line); margin-bottom:32px; }
+h1 { font-family:inherit; letter-spacing:-.05em; }
+.calculator-card,.history-card { background:var(--card); border-radius:16px; border:1px solid var(--line); box-shadow:var(--shadow); backdrop-filter:none; }
+.display { background:var(--card-strong); border:1px solid var(--line); border-radius:12px; padding:24px; }
+.result { font-variant-numeric:tabular-nums; letter-spacing:-.04em; }
+.key { background:var(--card-strong); color:var(--text); box-shadow:none; border:1px solid var(--line); border-radius:10px; min-height:56px; transition:background-color 140ms; }
+.key-fn,.key-critical { color:var(--accent-2); background:var(--card); }
+.key-operator { background:var(--bg-soft); color:var(--accent-2); }
+.key-equal { background:var(--accent); color:white; }
+body[data-theme="dark"] .key-equal { color:#102622; }
+button:hover { transform:none; }
+button:focus-visible { outline:3px solid var(--accent-2); outline-offset:3px; }
+.theme-toggle,.history-clear { min-height:44px; border-radius:8px; background:var(--card); color:var(--text); border:1px solid var(--line); }
+.history-list li { border-radius:8px; box-shadow:none; }
+@media(max-width:600px) { .app { padding:24px 16px; } .app-header { flex-direction:column; align-items:flex-start; } .workspace { grid-template-columns:minmax(0,1fr); } }
+@media(prefers-reduced-motion:reduce) { *,*::before,*::after { animation:none!important; transition:none!important; } }
